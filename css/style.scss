@@ -1,0 +1,348 @@
+@font-face {
+ font-family: "Bebas Neue Bold";
+ src: url("../fonts/Bebas Neue Bold.ttf") format("ttf");
+}
+
+@font-face {
+ font-family: "Lato Regular";
+ src: url("../fonts/Lato Regular.ttf") format("ttf");
+}
+
+$main-txt-clr: #00888d;
+
+$icon-clr: #65ca58;
+
+@mixin dash($ver-align: 0, $hor-align: auto, $marg-btm: .7rem){
+	margin: $ver-align $hor-align;
+	margin-bottom: $marg-btm;
+	content: '';
+	display: block;
+	width: 67px;
+	height: 7px;
+	background-color: $icon-clr;
+} 
+
+// ---------- COMMON STYLES ---------- //
+*{
+    box-sizing: border-box;
+}
+
+.wrap__btn{
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+	border: 2px solid $main-txt-clr;
+	border-radius: 0;
+	background: transparent;
+	text-transform: uppercase;
+    line-height: 1;
+	font-weight: bold;
+	color: $main-txt-clr;
+	&_long{
+		padding-left: 3.5rem;
+		padding-right: 3.5rem;
+	}
+    &_round{
+        &:first-child{
+            margin-right: 2rem;
+        }
+        padding: 1rem 2.5rem;
+        background-color: #f1f1f1;
+        border: 4px solid transparent;
+        border-radius: 30px;
+        &:hover{
+            border: 4px solid $main-txt-clr;
+        }
+    }
+}
+
+
+.carousel-control{
+	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0))!important;
+	background-color: transparent;
+}
+
+.glyphicon-chevron-left{
+	left: 0!important;
+}
+
+.glyphicon-chevron-right{
+	right: 0!important;
+}
+
+.carousel-indicators{
+    bottom: -90px;
+	& li{
+		border: none;
+		background-color: #6cd0d4;
+		&.active{
+			background-color: $main-txt-clr;
+		}
+	}
+}
+// ---------- COMMON STYLES END ---------- //
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}
+
+body{
+	
+}
+
+html{
+	font-size: 10px;
+}
+
+.container{
+    overflow: hidden;
+}
+// ---------- HEADER ----------//
+.header{
+
+}
+
+.header__nav{
+	margin-bottom: 6.5rem;
+}
+
+h1{
+	font-size: 5rem;
+	text-transform: uppercase;
+	line-height: .5;
+	color: $main-txt-clr;
+    & a:hover{
+        text-decoration: none;
+    }
+}
+
+h3{
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
+
+.gamburger{
+	font-size: 5rem;
+	color: $main-txt-clr;
+}
+
+.logo__tagline{
+	font-family: "Lato Regular";
+	font-size: 1.8rem;
+	letter-spacing: 1rem;
+}
+
+.mainTxt{
+    &__caption{
+        font-weight: bold;
+        font-size: 5rem;
+        text-transform: uppercase;
+        color: $main-txt-clr;
+        &:before{
+            @include dash(0, 0);
+        }
+    }
+    &__text{
+        font-size: 2rem;
+    }    
+}
+
+.header__text + p{
+	margin-bottom: 3.5rem;
+}
+// ---------- HEADER END ---------- //
+
+
+// ---------- CONTENT ---------- //
+.content{
+    margin-bottom: 15rem;
+    &__inner{
+        
+    }
+    &__paragraphs{
+        padding-bottom: 6rem;
+    }
+    &__caption{
+        margin-top: 15rem;
+        font-size: 4rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $main-txt-clr;
+        &:before{
+            @include dash();
+        }
+    }
+    &__text{
+        margin-bottom: 0;
+        padding-bottom: 6rem;
+        font-size: 2rem;
+        font-weight: bold;
+        color: $main-txt-clr;
+    }
+    &__simpleTxt{
+        margin-top: 4rem;
+    }
+}
+
+.circles{
+	padding-top: 20rem;
+	background: url(../img/three_circles3.png) no-repeat top;
+    background-size: auto;
+	&__littleTxt{
+		font-size: 1.2rem;
+	}
+	&__btn{
+		margin-top: 3rem;
+	}
+}
+
+.useful{
+    &__wrap{
+        
+    }
+    &__circles{
+//        min-width: 100px;
+//        border-radius: 50%;
+//        padding: 7rem;
+        border: 10px solid $main-txt-clr;
+        border-radius: 50%;
+        padding: 40%;
+    }
+    &__circles_1{
+        background: url(../img/ico1.png) no-repeat center;
+        background-size: 30%;
+    }
+    &__circles_2{
+        background: url(../img/ico2.png) no-repeat center;
+        background-size: 50%;
+    }
+    &__circles_3{
+        background: url(../img/ico3.png) no-repeat center;
+        background-size: 50%;
+    }
+    &__circles_4{
+        background: url(../img/ico4.png) no-repeat center;
+        background-size: 50%;
+    }
+    &__circles_5{
+        background: url(../img/ico5.png) no-repeat center;
+        background-size: 50%;
+    }
+}
+
+.space{
+    margin-top: 7rem;
+    margin-bottom: 10rem;
+}
+
+.lines{
+    padding: 0 0 14rem 0;
+    background: url(../img/lines.png) no-repeat 100%;
+    &__btn{
+        margin-top: 5.5rem;
+    }
+}
+
+.about{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    &_last{
+        margin-bottom: 4rem;
+    }
+    &_marginTop{
+        margin-top: 4.3rem;
+    }
+}
+
+.perferendisTop{
+    margin-bottom: 5rem;
+}
+
+.perferendis{
+    &__bg{
+        border: 7px solid $main-txt-clr;
+        border-radius: 50%;
+        padding: 40%;
+        background: url(../img/wind.png) no-repeat center;
+        background-size: 50%;
+    }
+    &__caption{
+        margin: 0 0 .5rem;
+        padding-bottom: .5rem;
+        width: 75%;
+        border-bottom: 1px solid #6cd0d4;
+        font-size: 2rem;
+        color: $main-txt-clr;
+    }
+    &__toggle{
+        display: none;
+    }
+}
+
+.footerNav{
+    margin-bottom: 6rem;
+    border-top: 1px solid $main-txt-clr;
+    border-bottom: 1px solid $main-txt-clr;
+    padding: 1.6rem 0;
+    line-height: 1;
+    font-size: 2rem;
+    &__item{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0;
+    }
+    &__link{
+        color: #000;
+    }
+}
+
+.footerContact{
+    border-bottom: 1px solid $main-txt-clr;
+    padding-bottom: 7rem;
+    font-weight: bold;
+    font-size: 2rem;
+    &__link{
+        color: $main-txt-clr;
+    }
+    &__wrap{
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+    }
+    &__bg{
+        margin-right: 2.5rem;
+        border: 7px solid $main-txt-clr;
+        border-radius: 50%;
+        padding: 5%;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &__bg_1{
+        background: url(../img/fb.png) no-repeat center;
+        background-size: 40%;
+    }
+    &__bg_2{
+        background: url(../img/you.png) no-repeat center;
+        background-size: 55%;
+    }
+    &__bg_3{
+        background: url(../img/google.png) no-repeat center;
+        background-size: 55%;
+    }
+}
+
+.footerCopy{
+    display: flex;
+    justify-content: space-between;
+}
+// ---------- CONTENT END ---------- //
